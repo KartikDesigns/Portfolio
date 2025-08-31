@@ -114,47 +114,105 @@ footer {
 /* ==============================
    Gallery
 ============================== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  align-items: stretch;
+/* ==============================
+   Gallery Redesign
+============================== */
+/* ==============================
+   Gallery Section (Moon + Venus)
+============================== */
+/* ==============================
+   Gallery Section (Classic + Modern Blend)
+============================== */
+.gallery-section {
+  padding: 4rem 0;
 }
 
+/* Title - modern but elegant */
+.gallery-title {
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(163, 191, 250, 0.6),
+               0 0 35px rgba(255, 159, 214, 0.4);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15); /* classic underline */
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
 .gallery-card {
   position: relative;
   overflow: hidden;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  border-radius: 0.75rem; /* slightly more classic */
+  background: linear-gradient(135deg, rgba(255, 158, 196, 0.12), rgba(163, 191, 250, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle frame (classic feel) */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4); /* balanced shadow */
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  height: 100%;
+  cursor: pointer;
 }
 
+/* Image */
 .gallery-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
+  border-radius: 0.75rem;
 }
 
+/* Overlay Title */
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(180deg, transparent, rgba(25, 20, 35, 0.95));
+  color: #fdfdfd;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(15%);
+  text-shadow: 0 0 8px rgba(255, 159, 214, 0.5), 0 0 12px rgba(163, 191, 250, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.15); /* thin classic line */
+}
+
+/* Hover Effects */
 .gallery-card:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.65);
+  box-shadow: 0 10px 35px rgba(255, 111, 174, 0.5),
+              0 0 30px rgba(163, 191, 250, 0.35);
 }
+
 .gallery-card:hover img {
   transform: scale(1.08);
 }
 
-@media (max-width: 768px) {
-  .gallery-card {
-    border-radius: 0.75rem;
-  }
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* Responsive */
 @media (max-width: 576px) {
-  .gallery-card {
-    border-radius: 0.5rem;
+  .gallery-grid {
+    gap: 1rem;
+  }
+  .gallery-overlay {
+    font-size: 0.9rem;
   }
 }
 
