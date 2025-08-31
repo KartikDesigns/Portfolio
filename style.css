@@ -13,8 +13,8 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Orbitron", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(163,191,250,0.25),  /* moon */
-               0 0 8px rgba(200,146,216,0.2);   /* venus */
+  text-shadow: 0 0 10px rgba(157,189,255,0.25),  /* moon */
+               0 0 8px rgba(217,167,199,0.25);  /* venus */
 }
 
 /* ==============================
@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6,
 .navbar-dark.bg-dark {
   background: rgba(42, 38, 51, 0.95) !important;
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(163,191,250,0.25); /* moon accent */
+  border-bottom: 1px solid rgba(157,189,255,0.25); /* moon accent */
 }
 
 /* ==============================
@@ -34,30 +34,30 @@ h1, h2, h3, h4, h5, h6,
   background: linear-gradient(
       rgba(42, 38, 51, 0.88),
       rgba(58, 50, 74, 0.92),
-      rgba(146, 95, 209, 0.15) /* purple veil */
+      rgba(125, 91, 214, 0.15) /* purple veil */
     ),
     url("https://picsum.photos/1920/1080?blur=6") center/cover no-repeat;
-  text-shadow: 0 0 10px rgba(163,191,250,0.25),
-               0 0 10px rgba(216,167,177,0.2);
+  text-shadow: 0 0 10px rgba(157,189,255,0.25),
+               0 0 10px rgba(217,167,199,0.25);
 }
 
 /* ==============================
    Buttons
 ============================== */
 .btn-primary {
-  background: linear-gradient(90deg, #d8a7b1, #7b4ed4, #a3bffa);
+  background: linear-gradient(90deg, #d9a7c7, #7d5bd6, #9dbdff);
   /* Venus → Purple → Moon */
   border: none;
   color: #fff !important;
   padding: 0.7rem 2rem;
   border-radius: 28px;
-  box-shadow: 0 3px 10px rgba(142, 108, 217, 0.25);
+  box-shadow: 0 3px 10px rgba(125, 91, 214, 0.25);
   transition: all 0.3s ease;
 }
 .btn-primary:hover {
-  background: linear-gradient(90deg, #c792d8, #925fd1, #8aa8f7);
-  /* lilac rose → soft purple → moon */
-  box-shadow: 0 5px 14px rgba(163,191,250,0.35);
+  background: linear-gradient(90deg, #caa9e0, #8e6cd9, #8aa8f7);
+  /* Venus + Purple + Moon mix */
+  box-shadow: 0 5px 14px rgba(157, 189, 255, 0.35);
   transform: translateY(-2px);
 }
 
@@ -69,8 +69,8 @@ h1, h2, h3, h4, h5, h6,
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 3px 12px rgba(163,191,250,0.15),
-              0 3px 12px rgba(146,95,209,0.15);
+  box-shadow: 0 3px 12px rgba(157,189,255,0.15),
+              0 3px 12px rgba(125,91,214,0.15);
 }
 
 /* ==============================
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6,
   overflow: hidden;
 }
 .skill-progress {
-  background: linear-gradient(90deg, #d8a7b1, #9a74dd, #a3bffa);
+  background: linear-gradient(90deg, #d9a7c7, #9a74dd, #9dbdff);
   height: 100%;
   width: 0;
   border-radius: 6px;
@@ -99,26 +99,26 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 12px;
 }
 .email-highlight {
-  background: linear-gradient(90deg, #d8a7b1, #7b4ed4, #8aa8f7);
+  background: linear-gradient(90deg, #d9a7c7, #7d5bd6, #9dbdff);
   color: #fff;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 12px rgba(142, 108, 217, 0.25);
+  box-shadow: 0 0 12px rgba(125, 91, 214, 0.25);
 }
 .email-highlight:hover {
-  background: linear-gradient(90deg, #c792d8, #925fd1, #a3bffa);
-  box-shadow: 0 0 18px rgba(163, 191, 250, 0.35);
+  background: linear-gradient(90deg, #caa9e0, #8e6cd9, #a3bffa);
+  box-shadow: 0 0 18px rgba(157, 189, 255, 0.35);
 }
 
 /* ==============================
    Footer
 ============================== */
 footer {
-  border-top: 1px solid rgba(163,191,250,0.25);
+  border-top: 1px solid rgba(157,189,255,0.25);
   text-align: center;
   padding: 1rem 0;
-  color: #a3bffa;
+  color: #9dbdff;
 }
 
 /* ==============================
@@ -138,8 +138,8 @@ footer {
   display: inline-block;
   padding-bottom: 0.4rem;
   opacity: 0.95;
-  text-shadow: 0 0 12px rgba(163,191,250,0.25),
-               0 0 12px rgba(200,146,216,0.25);
+  text-shadow: 0 0 12px rgba(157,189,255,0.25),
+               0 0 12px rgba(217,167,199,0.25);
 }
 .gallery-grid {
   display: grid;
@@ -175,13 +175,13 @@ footer {
   opacity: 0;
   transition: opacity 0.35s ease, transform 0.35s ease;
   transform: translateY(15%);
-  text-shadow: 0 0 8px rgba(163,191,250,0.25),
-               0 0 10px rgba(216,167,177,0.2);
+  text-shadow: 0 0 8px rgba(157,189,255,0.25),
+               0 0 10px rgba(217,167,199,0.2);
 }
 .gallery-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(163,191,250,0.25),
-              0 0 14px rgba(200,146,216,0.2);
+  box-shadow: 0 6px 16px rgba(157,189,255,0.25),
+              0 0 14px rgba(217,167,199,0.2);
 }
 .gallery-card:hover img { transform: scale(1.03); }
 .gallery-card:hover .gallery-overlay {
@@ -209,9 +209,63 @@ footer {
   border-radius: 50%;
   text-align: center;
   line-height: 45px;
-  background: linear-gradient(90deg, #7b4ed4, #8e6cd9);
+  background: linear-gradient(90deg, #7d5bd6, #8e6cd9);
   color: #fff;
   box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* ==============================
+   Icons (New Balanced Colors)
+============================== */
+
+/* Default icons */
+.icon-default {
+  color: #9dbdff; /* Moon */
+  opacity: 0.85;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+.icon-default:hover {
+  color: #d9a7c7; /* Venus */
+  text-shadow: 0 0 6px rgba(125, 91, 214, 0.35),   /* Purple glow */
+               0 0 10px rgba(157, 189, 255, 0.3),  /* Moon glow */
+               0 0 12px rgba(217,167,199,0.25);   /* Venus glow */
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* Social Icons */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #9dbdff;
+  font-size: 1.2rem;
+  margin: 0 0.4rem;
+  transition: all 0.3s ease;
+}
+.social-icon:hover {
+  background: linear-gradient(90deg, #d9a7c7, #7d5bd6, #9dbdff);
+  color: #fff;
+  border: 1px solid rgba(157,189,255,0.25);
+  box-shadow: 0 0 10px rgba(125, 91, 214, 0.35),
+              0 0 14px rgba(217,167,199,0.25);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Navbar icons */
+.navbar .nav-link .icon-default {
+  font-size: 1.1rem;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.navbar .nav-link:hover .icon-default {
+  color: #caa9e0; /* Venus + Purple mix */
 }
 
 /* ==============================
@@ -220,3 +274,46 @@ footer {
 .mt-6 { margin-top: 6rem !important; }
 .mt-7 { margin-top: 8rem !important; }
 .mt-8 { margin-top: 10rem !important; }
+
+/* ==============================
+   Text Selection (Moon + Venus)
+============================== */
+::selection {
+  background: #d9a7c7; /* Venus */
+  color: #2b2f55;      /* Moon-inspired dark blue for contrast */
+}
+
+::-moz-selection {
+  background: #d9a7c7;
+  color: #2b2f55;
+}
+
+/* ==============================
+   Scrollbar (Moon + Venus aesthetic)
+============================== */
+
+/* Works in Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2b2935; /* dark cosmic base */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d9a7c7, #9dbdff); /* Venus → Moon */
+  border-radius: 6px;
+  border: 2px solid #2b2935; /* adds space around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #caa9e0, #7d5bd6, #8aa8f7); /* Venus + Purple + Moon */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9dbdff #2b2935; /* Thumb (Moon) | Track (cosmic base) */
+}
