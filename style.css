@@ -1,20 +1,23 @@
 /* ==============================
-   Universal White Text
+   Font Setup
 ============================== */
-body, body * {
+body {
+  font-family: "Inter", sans-serif; /* Clean body text */
+  background: linear-gradient(160deg, #2b2935, #3a324a); /* cosmic night */
+  line-height: 1.7;
   color: #ffffff !important;
 }
 
-/* ==============================
-   Base Styling
-============================== */
-body {
-  font-family: "Newsreader", "Noto Sans", sans-serif;
-  background: linear-gradient(160deg, #2b2935, #3a324a); /* cosmic night */
-  line-height: 1.7;
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: "Orbitron", sans-serif; /* Futuristic headings */
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-/* Navbar */
+/* ==============================
+   Navbar
+============================== */
 .navbar-custom,
 .navbar-dark.bg-dark {
   background: rgba(42, 38, 51, 0.95) !important;
@@ -22,7 +25,9 @@ body {
   border-bottom: 1px solid #3e354d;
 }
 
-/* Hero Section */
+/* ==============================
+   Hero Section
+============================== */
 .bg-section {
   background: linear-gradient(
       rgba(42, 38, 51, 0.88),
@@ -32,7 +37,9 @@ body {
   text-shadow: 0 0 12px rgba(176, 138, 230, 0.3);
 }
 
-/* Buttons */
+/* ==============================
+   Buttons
+============================== */
 .btn-primary {
   background: linear-gradient(90deg, #7b4ed4, #a678e0);
   border: none;
@@ -47,7 +54,9 @@ body {
   transform: translateY(-3px);
 }
 
-/* Cards */
+/* ==============================
+   Cards
+============================== */
 .card.bg-dark {
   background: rgba(47, 42, 59, 0.9) !important;
   border: 1px solid #3e354d;
@@ -55,7 +64,9 @@ body {
   overflow: hidden;
 }
 
-/* Skills */
+/* ==============================
+   Skills
+============================== */
 .skill-bar {
   background: #e9ecef;
   height: 10px;
@@ -71,16 +82,15 @@ body {
   transition: width 1.5s ease-in-out; /* smooth animation */
 }
 
-
-/* Email Highlight */
-/* Contact Section */
+/* ==============================
+   Contact Section
+============================== */
 .contact-section {
   background: linear-gradient(160deg, #2c2a38, #3a3350);
   color: #fff;
   border-radius: 12px;
 }
 
-/* Email Highlight (Venus 🌸 + Moon 🌙 balance) */
 .email-highlight {
   background: linear-gradient(90deg, #8e44ad, #3a3f9f);
   color: #fff;
@@ -94,22 +104,23 @@ body {
   box-shadow: 0 0 25px rgba(155, 89, 182, 0.6);
 }
 
-/* Footer */
+/* ==============================
+   Footer
+============================== */
 footer {
   border-top: 1px solid #3e354d;
-
 }
 
-/* Base gallery look */
-/* Gallery Grid */
+/* ==============================
+   Gallery
+============================== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem; /* spacing between cards */
+  gap: 1.5rem;
   align-items: stretch;
 }
 
-/* Each card fills grid cell */
 .gallery-card {
   position: relative;
   overflow: hidden;
@@ -118,10 +129,9 @@ footer {
   backdrop-filter: blur(6px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  height: 100%; /* ensure equal height */
+  height: 100%;
 }
 
-/* Images fill card */
 .gallery-card img {
   width: 100%;
   height: 100%;
@@ -129,7 +139,6 @@ footer {
   transition: transform 0.6s ease;
 }
 
-/* Hover lift & zoom */
 .gallery-card:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.65);
@@ -148,29 +157,34 @@ footer {
     border-radius: 0.5rem;
   }
 }
-  /* Go to Top Button */
-    #goTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      display: none;
-      font-size: 22px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 45px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-    }
 
-    /* Extra margin utilities */
+/* ==============================
+   Go to Top Button
+============================== */
+#goTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: none;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* ==============================
+   Extra Margin Utilities
+============================== */
 .mt-6 {
-  margin-top: 6rem !important; /* ~96px */
+  margin-top: 6rem !important;
 }
 .mt-7 {
-  margin-top: 8rem !important; /* ~128px */
+  margin-top: 8rem !important;
 }
 .mt-8 {
-  margin-top: 10rem !important; /* ~160px */
+  margin-top: 10rem !important;
 }
