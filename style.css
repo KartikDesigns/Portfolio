@@ -2,15 +2,15 @@
    Font Setup
 ============================== */
 body {
-  font-family: "Inter", sans-serif; /* Clean body text */
-  background: linear-gradient(160deg, #2b2935, #3a324a); /* cosmic night */
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(160deg, #2b2935, #3a324a); /* calm cosmic base */
   line-height: 1.7;
-  color: #ffffff !important;
+  color: #f8f8fa !important;
 }
 
 h1, h2, h3, h4, h5, h6,
 .navbar-brand {
-  font-family: "Orbitron", sans-serif; /* Futuristic headings */
+  font-family: "Orbitron", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6,
 .navbar-dark.bg-dark {
   background: rgba(42, 38, 51, 0.95) !important;
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid #3e354d;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 /* ==============================
@@ -33,53 +33,55 @@ h1, h2, h3, h4, h5, h6,
       rgba(42, 38, 51, 0.88),
       rgba(58, 50, 74, 0.9)
     ),
-    url("https://picsum.photos/1920/1080?blur=5") center/cover no-repeat;
-  text-shadow: 0 0 12px rgba(176, 138, 230, 0.3);
+    url("https://picsum.photos/1920/1080?blur=6") center/cover no-repeat;
+  text-shadow: 0 0 8px rgba(163,191,250,0.25); /* moon glow */
 }
 
 /* ==============================
    Buttons
 ============================== */
 .btn-primary {
-  background: linear-gradient(90deg, #7b4ed4, #a678e0);
+  background: linear-gradient(90deg, #ffb0d6, #8e6cd9, #a3c2fa);
+  /* Venus blush → Purple → Moon silver-blue */
   border: none;
-  color: #ffffff !important;
-  padding: 0.75rem 2rem;
-  border-radius: 30px;
-  box-shadow: 0 4px 12px rgba(123, 78, 212, 0.3);
+  color: #fff !important;
+  padding: 0.7rem 2rem;
+  border-radius: 28px;
+  box-shadow: 0 3px 10px rgba(142, 108, 217, 0.25);
+  transition: all 0.3s ease;
 }
 .btn-primary:hover {
-  background: linear-gradient(90deg, #6b3cc4, #925fd1);
-  box-shadow: 0 6px 18px rgba(146, 95, 209, 0.45);
-  transform: translateY(-3px);
+  background: linear-gradient(90deg, #e99ac6, #7b4ed4, #8aa8f7);
+  box-shadow: 0 5px 14px rgba(163, 191, 250, 0.35);
+  transform: translateY(-2px);
 }
 
 /* ==============================
    Cards
 ============================== */
 .card.bg-dark {
-  background: rgba(47, 42, 59, 0.9) !important;
-  border: 1px solid #3e354d;
-  border-radius: 16px;
+  background: rgba(47, 42, 59, 0.92) !important;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
 
 /* ==============================
    Skills
 ============================== */
 .skill-bar {
-  background: #e9ecef;
+  background: #eaeaea;
   height: 10px;
   border-radius: 6px;
   overflow: hidden;
 }
-
 .skill-progress {
-  background: linear-gradient(90deg, #6f42c1, #a066e8); /* Bootstrap purple gradient */
+  background: linear-gradient(90deg, #f6a9d8, #9a74dd, #a3bffa);
   height: 100%;
   width: 0;
   border-radius: 6px;
-  transition: width 1.5s ease-in-out; /* smooth animation */
+  transition: width 1.5s ease-in-out;
 }
 
 /* ==============================
@@ -90,117 +92,87 @@ h1, h2, h3, h4, h5, h6,
   color: #fff;
   border-radius: 12px;
 }
-
 .email-highlight {
-  background: linear-gradient(90deg, #8e44ad, #3a3f9f);
+  background: linear-gradient(90deg, #d77ee6, #7b4ed4, #8aa8f7);
   color: #fff;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(142, 68, 173, 0.3);
+  box-shadow: 0 0 12px rgba(142, 108, 217, 0.25);
 }
 .email-highlight:hover {
-  background: linear-gradient(90deg, #9b59b6, #4b50b7);
-  box-shadow: 0 0 25px rgba(155, 89, 182, 0.6);
+  background: linear-gradient(90deg, #ff9ec4, #925fd1, #a3bffa);
+  box-shadow: 0 0 18px rgba(163, 191, 250, 0.35);
 }
 
 /* ==============================
    Footer
 ============================== */
 footer {
-  border-top: 1px solid #3e354d;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 /* ==============================
    Gallery
 ============================== */
-/* ==============================
-   Gallery Redesign
-============================== */
-/* ==============================
-   Gallery Section (Moon + Venus)
-============================== */
-/* ==============================
-   Gallery Section (Classic + Modern Blend)
-============================== */
 .gallery-section {
   padding: 4rem 0;
 }
-
-/* Title - modern but elegant */
 .gallery-title {
   font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #fff;
-  text-shadow: 0 0 20px rgba(163, 191, 250, 0.6),
-               0 0 35px rgba(255, 159, 214, 0.4);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.15); /* classic underline */
+  color: #f2f2f7;
+  border-bottom: 2px solid rgba(255,255,255,0.15);
   display: inline-block;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
+  opacity: 0.95;
+  text-shadow: 0 0 14px rgba(163,191,250,0.3),
+               0 0 16px rgba(215,126,230,0.25);
 }
-
-/* Grid */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
 }
-
-/* Card */
 .gallery-card {
   position: relative;
   overflow: hidden;
-  border-radius: 0.75rem; /* slightly more classic */
-  background: linear-gradient(135deg, rgba(255, 158, 196, 0.12), rgba(163, 191, 250, 0.08));
-  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle frame (classic feel) */
-  backdrop-filter: blur(10px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4); /* balanced shadow */
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
 }
-
-/* Image */
 .gallery-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
   border-radius: 0.75rem;
 }
-
-/* Overlay Title */
 .gallery-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background: linear-gradient(180deg, transparent, rgba(25, 20, 35, 0.95));
+  bottom: 0; left: 0; right: 0;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(180deg, transparent, rgba(25, 20, 35, 0.85));
   color: #fdfdfd;
   font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
   opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease;
   transform: translateY(15%);
-  text-shadow: 0 0 8px rgba(255, 159, 214, 0.5), 0 0 12px rgba(163, 191, 250, 0.5);
-  border-top: 1px solid rgba(255, 255, 255, 0.15); /* thin classic line */
 }
-
-/* Hover Effects */
 .gallery-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 10px 35px rgba(255, 111, 174, 0.5),
-              0 0 30px rgba(163, 191, 250, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(163,191,250,0.25),
+              0 0 14px rgba(215,126,230,0.2);
 }
-
-.gallery-card:hover img {
-  transform: scale(1.08);
-}
-
+.gallery-card:hover img { transform: scale(1.03); }
 .gallery-card:hover .gallery-overlay {
   opacity: 1;
   transform: translateY(0);
@@ -208,12 +180,8 @@ footer {
 
 /* Responsive */
 @media (max-width: 576px) {
-  .gallery-grid {
-    gap: 1rem;
-  }
-  .gallery-overlay {
-    font-size: 0.9rem;
-  }
+  .gallery-grid { gap: 1rem; }
+  .gallery-overlay { font-size: 0.85rem; }
 }
 
 /* ==============================
@@ -226,23 +194,18 @@ footer {
   z-index: 1000;
   display: none;
   font-size: 22px;
-  width: 50px;
-  height: 50px;
+  width: 50px; height: 50px;
   border-radius: 50%;
   text-align: center;
   line-height: 45px;
+  background: linear-gradient(90deg, #7b4ed4, #8e6cd9);
+  color: #fff;
   box-shadow: 0 3px 8px rgba(0,0,0,0.3);
 }
 
 /* ==============================
    Extra Margin Utilities
 ============================== */
-.mt-6 {
-  margin-top: 6rem !important;
-}
-.mt-7 {
-  margin-top: 8rem !important;
-}
-.mt-8 {
-  margin-top: 10rem !important;
-}
+.mt-6 { margin-top: 6rem !important; }
+.mt-7 { margin-top: 8rem !important; }
+.mt-8 { margin-top: 10rem !important; }
