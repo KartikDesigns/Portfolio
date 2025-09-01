@@ -13,8 +13,8 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Orbitron", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(157,189,255,0.25),  /* moon */
-               0 0 8px rgba(217,167,199,0.25);  /* venus */
+  text-shadow: 0 0 10px rgba(157,189,255,0.25),
+               0 0 8px rgba(217,167,199,0.25);
 }
 
 /* ==============================
@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6,
 .navbar-dark.bg-dark {
   background: rgba(42, 38, 51, 0.95) !important;
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(157,189,255,0.25); /* moon accent */
+  border-bottom: 1px solid rgba(157,189,255,0.25);
 }
 
 /* ==============================
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6,
   background: linear-gradient(
       rgba(42, 38, 51, 0.88),
       rgba(58, 50, 74, 0.92),
-      rgba(125, 91, 214, 0.15) /* purple veil */
+      rgba(125, 91, 214, 0.15)
     ),
     url("https://picsum.photos/1920/1080?blur=6") center/cover no-repeat;
   text-shadow: 0 0 10px rgba(157,189,255,0.25),
@@ -46,7 +46,6 @@ h1, h2, h3, h4, h5, h6,
 ============================== */
 .btn-primary {
   background: linear-gradient(90deg, #d9a7c7, #7d5bd6, #9dbdff);
-  /* Venus → Purple → Moon */
   border: none;
   color: #fff !important;
   padding: 0.7rem 2rem;
@@ -56,7 +55,6 @@ h1, h2, h3, h4, h5, h6,
 }
 .btn-primary:hover {
   background: linear-gradient(90deg, #caa9e0, #8e6cd9, #8aa8f7);
-  /* Venus + Purple + Moon mix */
   box-shadow: 0 5px 14px rgba(157, 189, 255, 0.35);
   transform: translateY(-2px);
 }
@@ -122,7 +120,7 @@ footer {
 }
 
 /* ==============================
-   Gallery
+   Gallery (Desktop default)
 ============================== */
 .gallery-section {
   padding: 4rem 0;
@@ -175,8 +173,6 @@ footer {
   opacity: 0;
   transition: opacity 0.35s ease, transform 0.35s ease;
   transform: translateY(15%);
-  text-shadow: 0 0 8px rgba(157,189,255,0.25),
-               0 0 10px rgba(217,167,199,0.2);
 }
 .gallery-card:hover {
   transform: translateY(-3px);
@@ -189,44 +185,50 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive */
 /* ==============================
-   Mobile Responsiveness Fixes
+   Balanced Mobile Grid Gallery
 ============================== */
-
-/* 1. Reduce gallery spacing on small screens */
-@media (max-width: 576px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;  /* one column on very small screens */
-    gap: 0.75rem;                /* smaller spacing */
-  }
-  .gallery-card img {
-    border-radius: 0.5rem;       /* tighter look */
-  }
-}
-
-/* 2. Stack About section vertically */
 @media (max-width: 768px) {
-  #about {
-    text-align: center;          /* center text */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* single column */
+    gap: 1rem;
+    padding: 0.5rem;
   }
-  #about img {
-    display: block;
-    margin: 0 auto 1.5rem auto;  /* center image above text */
-    max-width: 180px;            /* smaller image size */
+
+  .gallery-card {
+    border-radius: 12px;
+    background: #2e2b3a;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+
+  .gallery-overlay {
+    position: relative;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    opacity: 1; /* always visible */
+    border-radius: 0 0 12px 12px;
   }
 }
 
-/* 3. Center-align Contact section content */
-@media (max-width: 576px) {
-  .contact-section {
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .contact-section .email-highlight {
-    display: inline-block;
-    margin: 1rem auto 0 auto;    /* center highlight button */
-    text-align: center;
+@media (max-width: 400px) {
+  .gallery-overlay {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
   }
 }
 
@@ -250,26 +252,23 @@ footer {
 }
 
 /* ==============================
-   Icons (New Balanced Colors)
+   Icons
 ============================== */
-
-/* Default icons */
 .icon-default {
-  color: #9dbdff; /* Moon */
+  color: #9dbdff;
   opacity: 0.85;
   font-size: 1.3rem;
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 .icon-default:hover {
-  color: #d9a7c7; /* Venus */
-  text-shadow: 0 0 6px rgba(125, 91, 214, 0.35),   /* Purple glow */
-               0 0 10px rgba(157, 189, 255, 0.3),  /* Moon glow */
-               0 0 12px rgba(217,167,199,0.25);   /* Venus glow */
+  color: #d9a7c7;
+  text-shadow: 0 0 6px rgba(125, 91, 214, 0.35),
+               0 0 10px rgba(157, 189, 255, 0.3),
+               0 0 12px rgba(217,167,199,0.25);
   transform: translateY(-2px);
   opacity: 1;
 }
 
-/* Social Icons */
 .social-icon {
   display: inline-flex;
   align-items: center;
@@ -293,14 +292,13 @@ footer {
   transform: translateY(-2px) scale(1.05);
 }
 
-/* Navbar icons */
 .navbar .nav-link .icon-default {
   font-size: 1.1rem;
   margin-right: 6px;
   vertical-align: middle;
 }
 .navbar .nav-link:hover .icon-default {
-  color: #caa9e0; /* Venus + Purple mix */
+  color: #caa9e0;
 }
 
 /* ==============================
@@ -311,61 +309,36 @@ footer {
 .mt-8 { margin-top: 10rem !important; }
 
 /* ==============================
-   Text Selection (Moon + Venus)
+   Text Selection
 ============================== */
 ::selection {
-  background: #d9a7c7; /* Venus */
-  color: #2b2f55;      /* Moon-inspired dark blue for contrast */
+  background: #d9a7c7;
+  color: #2b2f55;
 }
-
 ::-moz-selection {
   background: #d9a7c7;
   color: #2b2f55;
 }
 
 /* ==============================
-   Scrollbar (Moon + Venus aesthetic)
+   Scrollbar
 ============================== */
-
-/* Works in Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #2b2935; /* dark cosmic base */
+  background: #2b2935;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #d9a7c7, #9dbdff); /* Venus → Moon */
+  background: linear-gradient(180deg, #d9a7c7, #9dbdff);
   border-radius: 6px;
-  border: 2px solid #2b2935; /* adds space around thumb */
+  border: 2px solid #2b2935;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #caa9e0, #7d5bd6, #8aa8f7); /* Venus + Purple + Moon */
+  background: linear-gradient(180deg, #caa9e0, #7d5bd6, #8aa8f7);
 }
-
-/* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #9dbdff #2b2935; /* Thumb (Moon) | Track (cosmic base) */
-}
-
-/* Mobile Carousel Styling */
-#projectCarousel img {
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-}
-
-#projectCarousel .carousel-caption {
-  background: rgba(0,0,0,0.55);
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
-  font-size: 0.9rem;
-}
-
-#projectCarousel .carousel-inner {
-  transition-timing-function: ease-out; /* smoother swipe */
+  scrollbar-color: #9dbdff #2b2935;
 }
