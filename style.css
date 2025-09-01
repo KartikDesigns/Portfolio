@@ -352,3 +352,20 @@ footer {
   scrollbar-width: thin;
   scrollbar-color: #9dbdff #2b2935; /* Thumb (Moon) | Track (cosmic base) */
 }
+
+/* Mobile Carousel Styling */
+#projectCarousel img {
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+#projectCarousel .carousel-caption {
+  background: rgba(0,0,0,0.55);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+
+#projectCarousel .carousel-inner {
+  transition-timing-function: ease-out; /* smoother swipe */
+}
