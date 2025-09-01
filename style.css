@@ -190,9 +190,44 @@ footer {
 }
 
 /* Responsive */
+/* ==============================
+   Mobile Responsiveness Fixes
+============================== */
+
+/* 1. Reduce gallery spacing on small screens */
 @media (max-width: 576px) {
-  .gallery-grid { gap: 1rem; }
-  .gallery-overlay { font-size: 0.85rem; }
+  .gallery-grid {
+    grid-template-columns: 1fr;  /* one column on very small screens */
+    gap: 0.75rem;                /* smaller spacing */
+  }
+  .gallery-card img {
+    border-radius: 0.5rem;       /* tighter look */
+  }
+}
+
+/* 2. Stack About section vertically */
+@media (max-width: 768px) {
+  #about {
+    text-align: center;          /* center text */
+  }
+  #about img {
+    display: block;
+    margin: 0 auto 1.5rem auto;  /* center image above text */
+    max-width: 180px;            /* smaller image size */
+  }
+}
+
+/* 3. Center-align Contact section content */
+@media (max-width: 576px) {
+  .contact-section {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .contact-section .email-highlight {
+    display: inline-block;
+    margin: 1rem auto 0 auto;    /* center highlight button */
+    text-align: center;
+  }
 }
 
 /* ==============================
