@@ -408,3 +408,15 @@ footer {
   margin: auto;
   display: block;
 }
+
+/* Sirf desktop screen par Christmas popup image chhoti karo */
+@media (min-width: 992px) {
+  #lightboxModal img[src*="CHRISTMAX.png"] {
+    max-height: 500px;   /* desktop par chhoti height */
+    width: auto;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+  }
+}
+

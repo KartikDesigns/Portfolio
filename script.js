@@ -44,3 +44,6 @@ document.querySelectorAll(".logo-gallery-item a").forEach(link => {
     document.getElementById("logoLightboxImage").setAttribute("src", imgSrc);
   });
 });
+
+//  image   arrow
+
