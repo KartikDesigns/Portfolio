@@ -430,62 +430,95 @@ footer {
   }
 
   /* Optional: Arrow button styling */
-  #prevBtn, #nextBtn {
-    font-size: 2rem;
-    font-weight: bold;
-    border-radius: 50%;
-    padding: 0.5rem 0.9rem;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-  }
+/* ==============================
+   Logo Gallery Arrows (Same as Project Gallery)
+============================== */
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7d5bd6, #9dbdff); /* same cosmic colors */
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  z-index: 1055;
+}
 
-  #prevBtn:hover, #nextBtn:hover {
-    opacity: 1;
-  }
+#prevBtn { left: 20px; }
+#nextBtn { right: 20px; }
 
-    .logo-gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    cursor: pointer;
-  }
-  .logo-gallery-item img {
-    transition: transform 0.3s ease;
-  }
-  .logo-gallery-item:hover img {
-    transform: scale(1.05);
-  }
-  .logo-name-overlay {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    padding: 8px;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    font-size: 1rem;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .logo-gallery-item:hover .logo-name-overlay {
-    opacity: 1;
-  }
-  #logoLightboxImage {
-    max-height: 80vh;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  #logoLightboxImage.show {
-    opacity: 1;
-  }
-  .lightbox-prev, .lightbox-next {
-    font-size: 2rem;
-    background: rgba(0,0,0,0.6);
-    border: none;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  .lightbox-prev:hover, .lightbox-next:hover {
-    background: rgba(0,0,0,0.8);
-  }
+/* Hover */
+#prevBtn:hover,
+#nextBtn:hover {
+  background: linear-gradient(135deg, #d9a7c7, #7d5bd6, #9dbdff); /* hover blend */
+  box-shadow: 0 6px 18px rgba(157,189,255,0.55),
+              0 0 14px rgba(217,167,199,0.4);
+  transform: translateY(-50%) scale(1.1);
+  opacity: 1;
+}
+
+/* Active (press down effect) */
+#prevBtn:active,
+#nextBtn:active {
+  transform: translateY(-50%) scale(0.95);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.45) inset;
+}
+
+/* ==============================
+   Lightbox Arrows (Same as Project Gallery)
+============================== */
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7d5bd6, #9dbdff); /* Cosmic gradient */
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  opacity: 0.9;
+  transition: all 0.35s ease;
+  z-index: 1055;
+}
+
+/* Positioning */
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+/* Hover */
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: linear-gradient(135deg, #d9a7c7, #7d5bd6, #9dbdff); /* Hover blend */
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 18px rgba(157,189,255,0.55),
+              0 0 14px rgba(217,167,199,0.35);
+  opacity: 1;
+}
+
+/* Active (click down) */
+.lightbox-prev:active,
+.lightbox-next:active {
+  transform: translateY(-50%) scale(0.95);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.45) inset;
+}

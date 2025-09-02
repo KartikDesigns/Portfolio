@@ -45,5 +45,99 @@ document.querySelectorAll(".logo-gallery-item a").forEach(link => {
   });
 });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const galleryLinks = document.querySelectorAll(".gallery-card img");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const modal = document.getElementById("lightboxModal");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
+    let currentIndex = 0;
+    const images = Array.from(galleryLinks).map(img => img.src);
 
+    // Helper: Show image with fade transition
+    function showImage(index) {
+      lightboxImage.classList.remove("showing");
+      setTimeout(() => {
+        lightboxImage.src = images[index];
+        lightboxImage.onload = () => {
+          lightboxImage.classList.add("showing");
+        };
+      }, 200);
+    }
+
+    // Open modal on click
+    galleryLinks.forEach((img, index) => {
+      img.addEventListener("click", function (e) {
+        e.preventDefault();
+        currentIndex = index;
+        showImage(currentIndex);
+        new bootstrap.Modal(modal).show();
+      });
+    });
+
+    // Show next image
+    function showNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    // Show previous image
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    nextBtn.addEventListener("click", showNext);
+    prevBtn.addEventListener("click", showPrev);
+
+    // Keyboard navigation
+    document.addEventListener("keydown", function (e) {
+      if (document.querySelector("#lightboxModal.show")) {
+        if (e.key === "ArrowRight") showNext();
+        if (e.key === "ArrowLeft") showPrev();
+      }
+    });
+  });
+
+   document.addEventListener("DOMContentLoaded", function () {
+    const logoLinks = document.querySelectorAll(".logo-link");
+    const lightboxImage = document.getElementById("logoLightboxImage");
+    const prevBtn = document.querySelector(".lightbox-prev");
+    const nextBtn = document.querySelector(".lightbox-next");
+
+    const images = Array.from(logoLinks).map(link => link.querySelector("img").src);
+    let currentIndex = 0;
+
+    // Open modal with clicked image
+    logoLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        currentIndex = parseInt(this.getAttribute("data-index"));
+        showImage(currentIndex);
+      });
+    });
+
+    // Show image with fade effect
+    function showImage(index) {
+      if (index < 0) index = images.length - 1;
+      if (index >= images.length) index = 0;
+      currentIndex = index;
+      lightboxImage.classList.remove("show");
+      setTimeout(() => {
+        lightboxImage.src = images[currentIndex];
+        lightboxImage.classList.add("show");
+      }, 100);
+    }
+
+    // Buttons
+    prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
+    nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+
+    // Keyboard navigation
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("logoLightboxModal").classList.contains("show")) {
+        if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+        if (e.key === "ArrowRight") showImage(currentIndex + 1);
+      }
+    });
+  });
