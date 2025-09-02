@@ -45,5 +45,5 @@ document.querySelectorAll(".logo-gallery-item a").forEach(link => {
   });
 });
 
-//  image   arrow
+
 
