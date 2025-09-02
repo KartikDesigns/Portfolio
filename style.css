@@ -420,3 +420,72 @@ footer {
   }
 }
 
+ .lightbox-img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .lightbox-img.showing {
+    opacity: 1;
+  }
+
+  /* Optional: Arrow button styling */
+  #prevBtn, #nextBtn {
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0.5rem 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+
+  #prevBtn:hover, #nextBtn:hover {
+    opacity: 1;
+  }
+
+    .logo-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .logo-gallery-item img {
+    transition: transform 0.3s ease;
+  }
+  .logo-gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  .logo-name-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 8px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .logo-gallery-item:hover .logo-name-overlay {
+    opacity: 1;
+  }
+  #logoLightboxImage {
+    max-height: 80vh;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  #logoLightboxImage.show {
+    opacity: 1;
+  }
+  .lightbox-prev, .lightbox-next {
+    font-size: 2rem;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .lightbox-prev:hover, .lightbox-next:hover {
+    background: rgba(0,0,0,0.8);
+  }
