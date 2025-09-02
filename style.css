@@ -348,9 +348,6 @@ footer {
 /* ==============================
    Logo Gallery Specific Styles
 ============================== */
-/* ==============================
-   Logo Gallery Specific Styles (Updated)
-============================== */
 .logo-gallery-item {
   position: relative;
   overflow: hidden;
@@ -362,7 +359,7 @@ footer {
   cursor: pointer;
 }
 
-/* New overlay for the name */
+/* Overlay with logo name */
 .logo-name-overlay {
   position: absolute;
   bottom: 0;
@@ -374,44 +371,40 @@ footer {
   font-family: "Inter", sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  opacity: 0; /* Hidden by default */
+  opacity: 0;
   transition: opacity 0.35s ease;
   text-align: center;
 }
 
-/* Hover effects for desktop */
+/* Hover effects (desktop) */
 .logo-gallery-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(157,189,255,0.25),
               0 0 14px rgba(217,167,199,0.2);
 }
-
-/* Show the overlay on hover for desktop */
 .logo-gallery-item:hover .logo-name-overlay {
   opacity: 1;
 }
 
-/* ==============================
-   Mobile Styles (Name Always Visible)
-============================== */
+/* Mobile: logo names always visible */
 @media (max-width: 768px) {
   .logo-name-overlay {
-    position: relative; /* Positioned below the image on mobile */
+    position: relative;
     background: transparent;
-    opacity: 1; /* Always visible on mobile */
+    opacity: 1;
     text-align: center;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
   }
 }
+
 /* ==============================
-   Modal Image Size
+   Logo Modal Image
 ============================== */
-#logoLightboxModal .carousel-item img {
+#logoLightboxModal img {
   width: 500px;
   height: 500px;
   object-fit: contain;
   margin: auto;
   display: block;
 }
-
