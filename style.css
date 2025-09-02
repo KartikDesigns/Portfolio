@@ -343,39 +343,3 @@ footer {
   scrollbar-color: #9dbdff #2b2935;
 }
 
-/* ==============================
-   Logo Gallery Image Optimization
-============================== */
-.gallery-card .logo-img {
-  width: 100%; /* Ensures the image fits its container */
-  height: auto; /* Maintains the image's aspect ratio */
-  max-width: 250px; /* Reduces the displayed size */
-  max-height: 250px; /* Reduces the displayed size */
-  object-fit: contain; /* Scales the image to fit without cropping */
-}
-
-
-/* ==============================
-   Modal Image Custom Class
-============================== */
-.modal-logo-img {
-     max-width: 50% !important; /* Reduce image width to 80% of its container */
-    height: auto!important; /* Maintain aspect ratio */
-    object-fit: contain !important;
-    margin: 0 auto !important;
-}
-/* ==============================
-   Gallery Card Image Resizing
-============================== */
-.gallery-card img.image-resize-responsive {
-    max-width: 50%!important;
-    height: auto!important;
-    object-fit: contain !important;
-}
-
-/* Adjust size for smaller devices */
-@media (max-width: 768px) {
-    .gallery-card img.image-resize-responsive {
-        max-width: 50%;
-    }
-}
