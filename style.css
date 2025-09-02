@@ -35,8 +35,7 @@ h1, h2, h3, h4, h5, h6,
       rgba(42, 38, 51, 0.88),
       rgba(58, 50, 74, 0.92),
       rgba(125, 91, 214, 0.15)
-    ),
-    url("https://picsum.photos/1920/1080?blur=6") center/cover no-repeat;
+    );
   text-shadow: 0 0 10px rgba(157,189,255,0.25),
                0 0 10px rgba(217,167,199,0.25);
 }
@@ -323,6 +322,7 @@ footer {
 /* ==============================
    Scrollbar
 ============================== */
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
