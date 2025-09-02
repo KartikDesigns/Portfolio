@@ -343,89 +343,74 @@ footer {
   scrollbar-color: #9dbdff #2b2935;
 }
 
+
+
 /* ==============================
    Logo Gallery Specific Styles
 ============================== */
-#logos .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  justify-items: center;
-  gap: 2rem;
-}
-
-#logos .gallery-card {
-  aspect-ratio: 1 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ==============================
+   Logo Gallery Specific Styles (Updated)
+============================== */
+.logo-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.25);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
 }
 
-#logos .gallery-card img {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  transition: transform 0.35s ease;
+/* New overlay for the name */
+.logo-name-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(180deg, transparent, rgba(25, 20, 35, 0.85));
+  color: #fdfdfd;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.35s ease;
+  text-align: center;
 }
 
-#logos .gallery-overlay {
-  display: none;
+/* Hover effects for desktop */
+.logo-gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(157,189,255,0.25),
+              0 0 14px rgba(217,167,199,0.2);
+}
+
+/* Show the overlay on hover for desktop */
+.logo-gallery-item:hover .logo-name-overlay {
+  opacity: 1;
 }
 
 /* ==============================
-   Balanced Mobile Grid Gallery
+   Mobile Styles (Name Always Visible)
 ============================== */
 @media (max-width: 768px) {
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0.5rem;
-  }
-
-  #logos .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-card {
-    border-radius: 12px;
-    background: #2e2b3a;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-    position: relative;
-  }
-
-  .gallery-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px 12px 0 0;
-    object-fit: cover;
-  }
-
-  .gallery-overlay {
-    position: relative;
-    background: rgba(0, 0, 0, 0.55);
-    color: #fff;
-    font-family: "Inter", sans-serif;
-    font-size: 0.9rem;
-    font-weight: 500;
+  .logo-name-overlay {
+    position: relative; /* Positioned below the image on mobile */
+    background: transparent;
+    opacity: 1; /* Always visible on mobile */
     text-align: center;
-    padding: 0.6rem 1rem;
-    opacity: 1;
-    border-radius: 0 0 12px 12px;
-  }
-
-  #logos .gallery-overlay {
-    display: none;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
   }
 }
-
-@media (max-width: 400px) {
-  .gallery-overlay {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.8rem;
-  }
+/* ==============================
+   Modal Image Size
+============================== */
+#logoLightboxModal .carousel-item img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  margin: auto;
+  display: block;
 }
