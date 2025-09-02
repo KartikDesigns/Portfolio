@@ -376,6 +376,6 @@ footer {
 /* Adjust size for smaller devices */
 @media (max-width: 768px) {
     .gallery-card img.image-resize-responsive {
-        max-width: 90%;
+        max-width: 50%;
     }
 }
