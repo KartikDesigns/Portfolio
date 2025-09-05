@@ -561,6 +561,14 @@ footer {
   transform: scale(1);
 }
 
+.kartik-highlight {
+  background: linear-gradient(135deg, #c2b6ff, #66a6ff); /* cold gradient */
+  color: #ffffff; /* deep navy for contrast */
+  padding: 3px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(102, 166, 255, 0.4); /* icy glow */
+  font-weight: bold; /* bold text */
+}
 /* ==============================
  end css styles
 ============================== */
