@@ -569,6 +569,11 @@ footer {
   box-shadow: 0 2px 8px rgba(102, 166, 255, 0.4); /* icy glow */
   font-weight: bold; /* bold text */
 }
+
+  #about p {
+    font-size: 1.25rem; /* ya 20px / ya 1.5rem */
+    line-height: 1.7;   /* text ko readable banane ke liye */
+  }
 /* ==============================
  end css styles
 ============================== */
