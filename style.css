@@ -349,14 +349,37 @@ footer {
    Logo Gallery Specific Styles
 ============================== */
 .logo-gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;              /* fixed uniform height */
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 0.75rem;
   box-shadow: 0 3px 12px rgba(0,0,0,0.25);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .logo-gallery-item {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-gallery-item {
+    height: 140px;
+  }
+}
+
+.logo-gallery-item img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;        /* keeps aspect ratio */
+  background: #1e1e2f;        /* backdrop for transparent PNGs */
+  padding: 8px;               /* spacing inside box */
+  border-radius: 0.5rem;
 }
 
 /* Overlay with logo name */
