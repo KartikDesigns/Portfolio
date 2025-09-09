@@ -51,7 +51,7 @@
   <section class="hero-section d-flex flex-column align-items-center justify-content-center text-center mt-7" id="home">
     <!-- Hero Image (Updated Logo) -->
     <img src="images/kartik.png" alt="Kartik Profile Logo" class="hero-img rounded-circle mb-4 shadow-lg img-fluid"
-      style="max-width: 150px; height: auto;">
+      style="max-width: 160px; height: auto;">
 
     <!-- Hero Text -->
     <h1 class="fw-bold display-4">Hi, I’m Kartik </h1>
@@ -80,12 +80,13 @@
     <div class="gallery-grid">
 
       <!-- Project 1 -->
-      <div class="gallery-card">
-        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
-          <img src="images/ganesh.png" alt="Ganesh Project" loading="lazy">
-        </a>
-        <div class="gallery-overlay">Ganesh</div>
-      </div>
+ <div class="gallery-card">
+  <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+    <img src="images/ganesh.png" alt="Ganesh Project" loading="lazy">
+    <span class="watermark">Made by Kartik</span>
+  </a>
+  <div class="gallery-overlay">Ganesh</div>
+</div>
 
       <!-- Project 2 -->
       <div class="gallery-card">
@@ -210,32 +211,35 @@
     </div>
   </section>
 
-  <!-- ==============================
+<!-- ==============================
      Lightbox Modal with Arrows
 ============================== -->
-  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content bg-dark border-0">
-        <div class="modal-body p-0 position-relative text-center">
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark border-0">
+      <div class="modal-body p-0 position-relative text-center">
 
-          <!-- Image with transition -->
-          <img id="lightboxImage" src="" class="img-fluid lightbox-img" alt="" style="max-height:80vh;">
+        <!-- Image with transition -->
+        <img id="lightboxImage" src="" class="img-fluid lightbox-img" alt="" style="max-height:80vh;">
 
-          <!-- Prev / Next Arrows -->
-          <!-- Prev Button -->
-          <button id="prevBtn" class="btn btn-primary position-absolute top-50 start-0 translate-middle-y ms-2">
-            <i class="fas fa-chevron-left"></i>
-          </button>
+        <!-- Watermark (Top Right) -->
+        <span class="modal-watermark">Made by Kartik</span>
 
-          <!-- Next Button -->
-          <button id="nextBtn" class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-2">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+        <!-- Prev / Next Arrows -->
+        <!-- Prev Button -->
+        <button id="prevBtn" class="btn btn-primary position-absolute top-50 start-0 translate-middle-y ms-2">
+          <i class="fas fa-chevron-left"></i>
+        </button>
 
-        </div>
+        <!-- Next Button -->
+        <button id="nextBtn" class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-2">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
       </div>
     </div>
   </div>
+</div>
 
   <!-- ==============================
      Logo Gallery
