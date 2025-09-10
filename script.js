@@ -144,3 +144,19 @@ document.querySelectorAll(".logo-gallery-item a").forEach(link => {
     }
   });
 });
+
+// Disable right-click only on modal images (silent, no alert)
+document.getElementById("lightboxImage").addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
+document.getElementById("logoLightboxImage").addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
+// Disable right-click on all images
+document.querySelectorAll("img").forEach(img => {
+  img.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+});

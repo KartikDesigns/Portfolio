@@ -617,11 +617,30 @@ footer {
   bottom: 12px;   /* niche kar diya */
   right: 18px;    /* right side me */
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255, 255, 255);
   font-weight: 600;
   text-shadow: 0 1px 3px rgba(0,0,0,0.7);
   pointer-events: none;
   z-index: 2000;
+}
+
+
+/* Watermark for Logo Gallery (always visible, no hover needed) */
+.logo-gallery-item {
+  position: relative; /* make container a positioning context */
+}
+
+.logo-gallery-item .watermark {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 12px;
+  color: rgb(255, 240, 240); /* light white */
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  pointer-events: none; /* does not block clicks */
+  z-index: 5;
+  opacity: 1; /* always visible */
 }
 
 /* ==============================
