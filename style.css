@@ -598,20 +598,29 @@ footer {
     line-height: 1.7;   /* text ko readable banane ke liye */
   }
 
-  /* Watermark styling */
+
 /* ==============================
    Responsive Watermarks
+============================== */
+/* ==============================
+   Transparent Portfolio Theme Watermarks
 ============================== */
 
 /* Project Gallery Watermark */
 .gallery-card .watermark {
   position: absolute;
-  bottom: 1.5%;   /* relative offset */
-  right: 2%;      /* relative offset */
-  font-size: clamp(10px, 1.6vw, 14px); /* 10px–14px auto scale */
-  color: rgba(255, 255, 255, 0.7);
+  bottom: 1.5%;
+  right: 2%;
+  font-size: clamp(10px, 1.6vw, 14px);
+  color: #fff; /* bright text */
+  background: linear-gradient(90deg,
+              rgba(217,167,199,0.55),
+              rgba(125,91,214,0.55),
+              rgba(157,189,255,0.55)); /* semi-transparent theme */
+  padding: 3px 8px;
+  border-radius: 6px;
   font-weight: 600;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7); /* readability */
   pointer-events: none;
   z-index: 10;
 }
@@ -623,8 +632,14 @@ footer {
   right: 3%;
   font-size: clamp(12px, 1.8vw, 16px);
   color: #fff;
+  background: linear-gradient(90deg,
+              rgba(202,169,224,0.55),
+              rgba(142,108,217,0.55),
+              rgba(138,168,247,0.55));
+  padding: 4px 10px;
+  border-radius: 6px;
   font-weight: 600;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.75);
   pointer-events: none;
   z-index: 2000;
 }
@@ -639,15 +654,21 @@ footer {
   bottom: 1.5%;
   right: 2%;
   font-size: clamp(10px, 1.5vw, 14px);
-  color: rgb(255, 240, 240);
+  color: #fff;
+  background: linear-gradient(90deg,
+              rgba(217,167,199,0.55),
+              rgba(125,91,214,0.55),
+              rgba(157,189,255,0.55));
+  padding: 3px 8px;
+  border-radius: 6px;
   font-weight: 600;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
   pointer-events: none;
   z-index: 5;
   opacity: 1;
 }
 
-/* Extra fine-tuning on small devices */
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .gallery-card .watermark,
   .modal-watermark,
@@ -655,6 +676,7 @@ footer {
     font-size: 12px;
     bottom: 6px;
     right: 8px;
+    padding: 3px 6px;
   }
 }
 
@@ -665,9 +687,10 @@ footer {
     font-size: 11px;
     bottom: 4px;
     right: 6px;
+    padding: 2px 5px;
   }
 }
 
 /* ==============================
- end css styles
+end css styles
 ============================== */
