@@ -599,48 +599,73 @@ footer {
   }
 
   /* Watermark styling */
+/* ==============================
+   Responsive Watermarks
+============================== */
+
+/* Project Gallery Watermark */
 .gallery-card .watermark {
   position: absolute;
-  bottom: 8px;
-  right: 10px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.65); /* halka transparent white */
+  bottom: 1.5%;   /* relative offset */
+  right: 2%;      /* relative offset */
+  font-size: clamp(10px, 1.6vw, 14px); /* 10px–14px auto scale */
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6); /* thoda readable banane ke liye */
-  pointer-events: none; /* click block na ho */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  pointer-events: none;
+  z-index: 10;
 }
 
-/* Modal Image Watermark - Top Right */
-/* Modal Image Watermark - Bottom Right */
+/* Modal Watermark */
 .modal-watermark {
   position: absolute;
-  bottom: 12px;   /* niche kar diya */
-  right: 18px;    /* right side me */
-  font-size: 14px;
-  color: rgb(255, 255, 255);
+  bottom: 2%;
+  right: 3%;
+  font-size: clamp(12px, 1.8vw, 16px);
+  color: #fff;
   font-weight: 600;
   text-shadow: 0 1px 3px rgba(0,0,0,0.7);
   pointer-events: none;
   z-index: 2000;
 }
 
-
-/* Watermark for Logo Gallery (always visible, no hover needed) */
+/* Logo Gallery Watermark */
 .logo-gallery-item {
-  position: relative; /* make container a positioning context */
+  position: relative;
 }
 
 .logo-gallery-item .watermark {
   position: absolute;
-  bottom: 8px;
-  right: 10px;
-  font-size: 12px;
-  color: rgb(255, 240, 240); /* light white */
+  bottom: 1.5%;
+  right: 2%;
+  font-size: clamp(10px, 1.5vw, 14px);
+  color: rgb(255, 240, 240);
   font-weight: 600;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  pointer-events: none; /* does not block clicks */
+  pointer-events: none;
   z-index: 5;
-  opacity: 1; /* always visible */
+  opacity: 1;
+}
+
+/* Extra fine-tuning on small devices */
+@media (max-width: 768px) {
+  .gallery-card .watermark,
+  .modal-watermark,
+  .logo-gallery-item .watermark {
+    font-size: 12px;
+    bottom: 6px;
+    right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-card .watermark,
+  .modal-watermark,
+  .logo-gallery-item .watermark {
+    font-size: 11px;
+    bottom: 4px;
+    right: 6px;
+  }
 }
 
 /* ==============================
