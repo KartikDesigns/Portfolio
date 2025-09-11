@@ -600,29 +600,31 @@ footer {
 
 
 /* ==============================
-   Responsive Watermarks
-============================== */
-/* ==============================
    Transparent Portfolio Theme Watermarks
 ============================== */
-
+/* Project Gallery Watermark */
 /* Project Gallery Watermark */
 .gallery-card .watermark {
   position: absolute;
   bottom: 1.5%;
   right: 2%;
-  font-size: clamp(10px, 1.6vw, 14px);
-  color: #fff; /* bright text */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   background: linear-gradient(90deg,
-              rgba(217,167,199,0.55),
-              rgba(125,91,214,0.55),
-              rgba(157,189,255,0.55)); /* semi-transparent theme */
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.7); /* readability */
+              rgba(217,167,199,0.6),
+              rgba(125,91,214,0.6),
+              rgba(157,189,255,0.6));
+  padding: 4px 6px;
+  border-radius: 50%;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.75);
   pointer-events: none;
   z-index: 10;
+}
+
+.gallery-card .watermark i {
+  font-size: clamp(12px, 1.6vw, 18px);
 }
 
 /* Modal Watermark */
@@ -630,18 +632,23 @@ footer {
   position: absolute;
   bottom: 2%;
   right: 3%;
-  font-size: clamp(12px, 1.8vw, 16px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   background: linear-gradient(90deg,
-              rgba(202,169,224,0.55),
-              rgba(142,108,217,0.55),
-              rgba(138,168,247,0.55));
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.75);
+              rgba(202,169,224,0.6),
+              rgba(142,108,217,0.6),
+              rgba(138,168,247,0.6));
+  padding: 6px 10px;
+  border-radius: 50%;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
   pointer-events: none;
   z-index: 2000;
+}
+
+.modal-watermark i {
+  font-size: clamp(14px, 2vw, 22px);
 }
 
 /* Logo Gallery Watermark */
@@ -653,19 +660,23 @@ footer {
   position: absolute;
   bottom: 1.5%;
   right: 2%;
-  font-size: clamp(10px, 1.5vw, 14px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   background: linear-gradient(90deg,
-              rgba(217,167,199,0.55),
-              rgba(125,91,214,0.55),
-              rgba(157,189,255,0.55));
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+              rgba(217,167,199,0.6),
+              rgba(125,91,214,0.6),
+              rgba(157,189,255,0.6));
+  padding: 4px 6px;
+  border-radius: 50%;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.75);
   pointer-events: none;
-  z-index: 5;
-  opacity: 1;
+  z-index: 10;
+}
+
+.logo-gallery-item .watermark i {
+  font-size: clamp(12px, 1.5vw, 18px);
 }
 
 /* Responsive tweaks */
@@ -673,10 +684,9 @@ footer {
   .gallery-card .watermark,
   .modal-watermark,
   .logo-gallery-item .watermark {
-    font-size: 12px;
     bottom: 6px;
     right: 8px;
-    padding: 3px 6px;
+    padding: 3px 5px;
   }
 }
 
@@ -684,12 +694,12 @@ footer {
   .gallery-card .watermark,
   .modal-watermark,
   .logo-gallery-item .watermark {
-    font-size: 11px;
     bottom: 4px;
     right: 6px;
-    padding: 2px 5px;
+    padding: 2px 4px;
   }
 }
+
 
 /* ==============================
 end css styles
