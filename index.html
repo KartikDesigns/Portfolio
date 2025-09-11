@@ -9,9 +9,15 @@
   <!-- ==============================
        Cache Control
   =============================== -->
-  <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
-  <meta http-equiv="Pragma" content="cache">
-  <meta http-equiv="Expires" content="31536000">
+<!-- Cache-Control: public = everyone can cache, max-age = 20 years in seconds, immutable = file will not change -->
+<meta http-equiv="Cache-Control" content="public, max-age=630720000, immutable">
+
+<!-- Pragma cache (legacy header, some older browsers) -->
+<meta http-equiv="Pragma" content="cache">
+
+<!-- Expires: exact future date 20 years from now -->
+<meta http-equiv="Expires" content="Wed, 11 Sep 2045 14:00:00 GMT">
+
 
   <!-- ==============================
        Favicon
