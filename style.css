@@ -598,11 +598,8 @@ footer {
     line-height: 1.7;   /* text ko readable banane ke liye */
   }
 
-
 /* ==============================
-   Transparent Portfolio Theme Watermarks
-============================== */
-/* Project Gallery Watermark */
+   Watermark Styles
 /* Project Gallery Watermark */
 .gallery-card .watermark {
   position: absolute;
@@ -699,7 +696,6 @@ footer {
     padding: 2px 4px;
   }
 }
-
 
 /* ==============================
 end css styles
