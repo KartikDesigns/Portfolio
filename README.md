@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kartik • Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-TU9yB2h8VZkF3Vq6c5Rk2Rt5tJQU1WcNfJpuFQj9uGm2Kp4YXuFQ7b4nXx9xE7l2MzQ12Tg5hDqxjRHz0+Q2Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
       margin: 0;
@@ -38,13 +39,14 @@
       flex-wrap: wrap;
       margin-top: 1rem;
     }
-    .icons img {
-      width: 50px;
-      height: 50px;
-      transition: transform 0.3s ease;
+    .icons img, .icons i {
+      font-size: 2.5rem;
+      color: #f1f5f9;
+      transition: transform 0.3s ease, color 0.3s ease;
     }
-    .icons img:hover {
+    .icons img:hover, .icons i:hover {
       transform: scale(1.15);
+      color: #38bdf8;
     }
     h3.section-title {
       font-size: 1.5rem;
@@ -59,7 +61,12 @@
 
   <section>
     <h3 class="section-title">Connect with me:</h3>
-    <p><!-- Social links can be added here --></p>
+    <div class="icons">
+      <a href="https://github.com/space-infornations" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="mailto:yourmail@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
   </section>
 
   <section>
