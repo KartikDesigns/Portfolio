@@ -16,44 +16,38 @@
 
   <section style="margin-top:2rem;">
     <h3 style="font-size:1.6rem; margin-bottom:1.5rem; color:#facc15; font-weight:500;">Connect with me</h3>
-    <div class="row justify-content-center" style="gap:1.5rem;">
-      <div class="col-4 col-sm-2" style="margin-bottom:1rem;">
-        <a href="https://github.com/space-infornations" target="_blank" style="font-size:2rem; color:#f1f5f9; text-decoration:none; display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
-          <i class="fab fa-github"></i>
-          <span style="font-size:0.85rem; color:#e2e8f0;">GitHub</span>
-        </a>
-      </div>
-      <div class="col-4 col-sm-2" style="margin-bottom:1rem;">
-        <a href="https://linkedin.com" target="_blank" style="font-size:2rem; color:#f1f5f9; text-decoration:none; display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
-          <i class="fab fa-linkedin"></i>
-          <span style="font-size:0.85rem; color:#e2e8f0;">LinkedIn</span>
-        </a>
-      </div>
-      <div class="col-4 col-sm-2" style="margin-bottom:1rem;">
-        <a href="mailto:yourmail@example.com" style="font-size:2rem; color:#f1f5f9; text-decoration:none; display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
-          <i class="fas fa-envelope"></i>
-          <span style="font-size:0.85rem; color:#e2e8f0;">Email</span>
-        </a>
-      </div>
+    <div class="d-flex justify-content-center" style="gap:2rem;">
+      <a href="https://github.com/space-infornations" target="_blank" style="font-size:2rem; color:#f1f5f9; text-decoration:none; display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+        <i class="fab fa-github"></i>
+        <span style="font-size:0.85rem; color:#e2e8f0;">GitHub</span>
+      </a>
+      <a href="https://linkedin.com" target="_blank" style="font-size:2rem; color:#f1f5f9; text-decoration:none; display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+        <i class="fab fa-linkedin"></i>
+        <span style="font-size:0.85rem; color:#e2e8f0;">LinkedIn</span>
+      </a>
+      <a href="mailto:yourmail@example.com" style="font-size:2rem; color:#f1f5f9; text-decoration:none; display:flex; flex-direction:column; align-items:center; gap:0.3rem;">
+        <i class="fas fa-envelope"></i>
+        <span style="font-size:0.85rem; color:#e2e8f0;">Email</span>
+      </a>
     </div>
   </section>
 
   <section style="margin-top:3rem;">
     <h3 style="font-size:1.6rem; margin-bottom:1.5rem; color:#facc15; font-weight:500;">Languages and Tools</h3>
-    <div class="row justify-content-center" style="gap:2rem;">
-      <div class="col-4 col-sm-2 text-center">
+    <div class="d-flex justify-content-center flex-wrap" style="gap:3rem;">
+      <div style="text-align:center;">
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" style="width:45px; height:45px; margin-bottom:0.5rem;" />
         <div style="font-size:0.9rem; color:#e2e8f0;">CSS3</div>
       </div>
-      <div class="col-4 col-sm-2 text-center">
+      <div style="text-align:center;">
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" style="width:45px; height:45px; margin-bottom:0.5rem;" />
         <div style="font-size:0.9rem; color:#e2e8f0;">HTML5</div>
       </div>
-      <div class="col-4 col-sm-2 text-center">
+      <div style="text-align:center;">
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" style="width:45px; height:45px; margin-bottom:0.5rem;" />
         <div style="font-size:0.9rem; color:#e2e8f0;">JavaScript</div>
       </div>
-      <div class="col-4 col-sm-2 text-center">
+      <div style="text-align:center;">
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" style="width:45px; height:45px; margin-bottom:0.5rem;" />
         <div style="font-size:0.9rem; color:#e2e8f0;">Python</div>
       </div>
