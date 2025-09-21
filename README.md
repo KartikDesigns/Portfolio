@@ -22,7 +22,7 @@
   <p style="margin: 0; font-size: 1.2em; color: #6a5acd;">
     <a href="mailto:kartikmongaworkonly@gmail.com" style="margin: 0 15px; text-decoration: none; color: #6a5acd;">Email</a> |
     <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" style="margin: 0 15px; text-decoration: none; color: #C13584;">Instagram</a> |
-    <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer" style="margin: 0 15px; text-decoration: none; color: #E60023;">Pinterest</a>
+    <a href="https://in.pinterest.com/KartikDesign12/" target="_blank" rel="noreferrer" style="margin: 0 15px; text-decoration: none; color: #E60023;">Pinterest</a>
   </p>
 
 </div>
