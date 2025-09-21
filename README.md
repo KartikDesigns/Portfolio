@@ -5,17 +5,14 @@
   </h1>
 
   <h3 style="color: #555; font-size: 1.5em; margin-bottom: 20px;">
-    Graphic Designer & Developer
+    Graphic Designer
   </h3>
 
-  <div style="display: inline-block; background: #ffe6f0; padding: 15px 25px; border-radius: 15px; margin-bottom: 30px;">
-    <h4 style="margin: 0; font-family: 'Courier New', monospace; font-style: italic; 
-               background: linear-gradient(90deg, #ff6ec4, #7873f5); 
-               -webkit-background-clip: text; 
-               -webkit-text-fill-color: transparent; 
-               font-size: 1.2em;">
-      Crafting visual symphonies, one pixel at a time.
-    </h4>
+  <div style="display: inline-block; background: #f0f0f5; padding: 20px 30px; border-radius: 15px; margin-bottom: 30px;">
+    <p style="margin: 0; font-family: 'Courier New', monospace; font-style: italic; 
+              color: #6a5acd; font-size: 1.2em; line-height: 1.5em;">
+      Infusing each design with the calm of moonlight and the elegance of celestial beauty, creating visuals that balance serenity and allure.
+    </p>
   </div>
 
   <h3 style="color: #333; font-size: 1.3em; margin-bottom: 15px;">
