@@ -63,9 +63,6 @@
     <h3 class="section-title">Connect with me:</h3>
     <div class="icons">
       <a href="https://github.com/space-infornations" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="mailto:yourmail@example.com"><i class="fas fa-envelope"></i></a>
     </div>
   </section>
 
