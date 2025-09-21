@@ -10,7 +10,14 @@
   Connect with me:
 </h3>
 <p style="text-align: left; margin-bottom: 20px;">
-  <!-- Add social links here -->
+  <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pinterest/pinterest-original.svg" 
+         alt="pinterest" width="40" height="40" style="margin-right: 10px;"/>
+  </a>
+  <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/instagram/instagram-original.svg" 
+         alt="instagram" width="40" height="40" style="margin-right: 10px;"/>
+  </a>
 </p>
 
 <h3 style="text-align: left; font-family: Arial, sans-serif; color: #333;">
