@@ -13,22 +13,25 @@
 
   <section style="margin-top:2rem;">
     <h3 style="font-size:1.6rem; margin-bottom:1rem; color:#facc15; font-weight:500;">Connect with me</h3>
-    <div style="display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; margin-top:1rem;">
-      <a href="https://github.com/space-infornations" target="_blank" style="font-size:2.2rem; color:#f1f5f9; text-decoration:none; transition:all 0.3s ease;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(80px,1fr)); gap:1.5rem; justify-items:center; margin-top:1rem; max-width:400px; margin-left:auto; margin-right:auto;">
+      <a href="https://github.com/space-infornations" target="_blank" style="font-size:2.2rem; color:#f1f5f9; text-decoration:none;">
         <i class="fab fa-github"></i>
+        <div style="font-size:0.85rem; margin-top:0.3rem;">GitHub</div>
       </a>
-      <a href="https://linkedin.com" target="_blank" style="font-size:2.2rem; color:#f1f5f9; text-decoration:none; transition:all 0.3s ease;">
+      <a href="https://linkedin.com" target="_blank" style="font-size:2.2rem; color:#f1f5f9; text-decoration:none;">
         <i class="fab fa-linkedin"></i>
+        <div style="font-size:0.85rem; margin-top:0.3rem;">LinkedIn</div>
       </a>
-      <a href="mailto:yourmail@example.com" style="font-size:2.2rem; color:#f1f5f9; text-decoration:none; transition:all 0.3s ease;">
+      <a href="mailto:yourmail@example.com" style="font-size:2.2rem; color:#f1f5f9; text-decoration:none;">
         <i class="fas fa-envelope"></i>
+        <div style="font-size:0.85rem; margin-top:0.3rem;">Email</div>
       </a>
     </div>
   </section>
 
   <section style="margin-top:3rem;">
     <h3 style="font-size:1.6rem; margin-bottom:1.5rem; color:#facc15; font-weight:500;">Languages and Tools</h3>
-    <div style="display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; margin-top:1rem;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); gap:2rem; justify-items:center; max-width:500px; margin-left:auto; margin-right:auto;">
       <div style="text-align:center;">
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" style="width:45px; height:45px; margin-bottom:0.5rem;" />
         <div style="font-size:0.9rem; color:#e2e8f0;">CSS3</div>
