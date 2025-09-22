@@ -624,14 +624,13 @@ footer {
   }
 
 /* Preloader Container */
-/* Preloader Container */
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff; /* Keep it clean, matches portfolio background */
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -639,13 +638,19 @@ footer {
   z-index: 9999;
 }
 
-/* Spinner Animation */
+/* Spinner with Venus & Moon gradient */
 .spinner {
-  border: 6px solid #e0e0e0; /* Light grey for contrast */
-  border-top: 6px solid #007bff; /* Portfolio primary blue */
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #007bff; /* Primary color */
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #FF69B4, /* Venus pink */
+    #B0E0E6, /* Moon soft blue */
+    #FF69B4
+  );
   animation: spin 1s linear infinite;
   margin-bottom: 15px;
 }
@@ -660,16 +665,9 @@ footer {
 .preloader-text {
   font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
-  color: #007bff; /* Match primary portfolio color */
+  color: #007bff;
   font-weight: 600;
   text-align: center;
-}
-
-/* Optional: subtle fade-out animation when loader finishes */
-#preloader.loaded {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 /* ==============================
