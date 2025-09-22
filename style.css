@@ -1,11 +1,20 @@
 /* ==============================
    Font Setup
 ============================== */
+
 body {
   font-family: "Inter", sans-serif;
-  background: linear-gradient(160deg, #2b2935, #3a324a, #4a3a6e); /* cosmic blend */
+  background: linear-gradient(
+    160deg,
+    #F3D7F2 0%,   /* Venus soft blush pink */
+    #8852BB 30%,  /* Venus deep lavender */
+    #997CB8 65%,  /* Moon muted lavender */
+    #CDEFFF 100%  /* Moon pastel blue */
+  );
+  color: #2a2a2a; /* readable text */
   line-height: 1.7;
-  color: #f8f8fa !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -74,18 +83,34 @@ h1, h2, h3, h4, h5, h6,
    Skills
 ============================== */
 .skill-bar {
-  background: #eaeaea;
+  background: #f5f5f5; /* light neutral, matches new bg */
   height: 10px;
   border-radius: 6px;
   overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* subtle depth */
 }
+
+.skill-bar {
+  background: #e8e8e8; /* soft neutral to contrast with body */
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
 .skill-progress {
-  background: linear-gradient(90deg, #d9a7c7, #9a74dd, #9dbdff);
+  background: linear-gradient(
+    90deg,
+    #F8C4E8, /* lighter Venus pink */
+    #A275D9, /* medium lavender */
+    #B3CFFF  /* lighter Moon pastel blue */
+  );
   height: 100%;
   width: 0;
   border-radius: 6px;
   transition: width 1.5s ease-in-out;
 }
+
 
 /* ==============================
    Contact Section
@@ -598,6 +623,45 @@ footer {
     line-height: 1.7;   /* text ko readable banane ke liye */
   }
 
+/* Preloader Container */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Spinner Animation */
+.spinner {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #007bff; /* Primary color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+/* Spinner Keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Preloader Text */
+.preloader-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  color: #007bff;
+  font-weight: 600;
+}
 
 
 /* ==============================
