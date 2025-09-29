@@ -262,7 +262,7 @@
   <!-- ==============================
      Lightbox Modal with Arrows
 ============================== -->
-  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" id="lightboxModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content bg-dark border-0">
         <div class="modal-body p-0 position-relative text-center">
@@ -288,7 +288,7 @@
   <!-- ==============================
      Simple Lightbox Modal (No Sequence)
 ============================== -->
-  <div class="modal fade" id="logoLightboxModal" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" id="logoLightboxModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content bg-dark border-0 position-relative">
         <div class="modal-body p-0 text-center">
@@ -363,7 +363,7 @@
       <!-- Logo 5 -->
       <div class="col">
         <div class="logo-gallery-item">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+          <a href="#" class="logo-link" data-index="4" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
             <img src="images/logos/solar system v3.webp" alt="Solar System" loading="lazy" class="img-fluid rounded">
 
           </a>
@@ -374,7 +374,7 @@
       <!-- Logo 6 -->
       <div class="col">
         <div class="logo-gallery-item">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+          <a href="#" class="logo-link" data-index="5" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
             <img src="images/logos/hunuman design.webp" alt="Hunuman Design" loading="lazy" class="img-fluid rounded">
 
           </a>
@@ -385,7 +385,7 @@
       <!-- Logo 7 -->
       <div class="col">
         <div class="logo-gallery-item">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+          <a href="#" class="logo-link" data-index="6" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
             <img src="images/logos/design logo  brown v4_.webp" alt="Logo 7" loading="lazy" class="img-fluid rounded">
 
           </a>
@@ -396,7 +396,7 @@
       <!-- Logo 8 -->
       <div class="col">
         <div class="logo-gallery-item">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+          <a href="#" class="logo-link" data-index="7" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
             <img src="images/logos/logo455.webp" alt="Logo 8" loading="lazy" class="img-fluid rounded">
 
           </a>
@@ -466,7 +466,7 @@
   <section class="contact-section py-5 text-center" id="contact">
     <div class="container">
       <h2 class="fw-bold mb-4">Get in Touch</h2>
-      <p class="lead mb-4">I’d love to connect and collaborate. Drop me a message anytime:</p>
+      <p class="lead mb-4" style="color: white;">connect and collaborate. Drop me a message anytime</p>
 
       <!-- Email Only -->
       <a href="mailto:kartikmongaworkonly@gmail.com"
@@ -521,7 +521,6 @@
 
   </div>
 </footer>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="script.js"  defer></script>
