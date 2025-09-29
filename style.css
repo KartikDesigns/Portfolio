@@ -25,8 +25,24 @@
   /* Gradient backgrounds */
   --venus-gradient: linear-gradient(135deg, var(--venus-primary), var(--venus-secondary));
   --moon-gradient: linear-gradient(135deg, var(--moon-primary), var(--moon-secondary));
-  --cosmic-gradient: linear-gradient(135deg, var(--cosmic-dark), var(--cosmic-darker));
-  --theme-gradient: linear-gradient(135deg, var(--primary-theme), var(--secondary-theme));
+  /* Updated cosmic gradient for a more subtle, classy appearance */
+  --cosmic-gradient: linear-gradient(135deg, 
+    var(--cosmic-darker) 0%, 
+    var(--cosmic-darker) 25%, 
+    #16162a 40%, 
+    var(--cosmic-dark) 60%, 
+    var(--cosmic-dark) 80%, 
+    #121225 100%);
+  /* Updated theme gradient with 75% Venus and 25% Moon for a classy, balanced blend */
+  --theme-gradient: linear-gradient(135deg, 
+    var(--venus-primary) 0%, 
+    var(--venus-primary) 25%, 
+    var(--venus-secondary) 35%, 
+    var(--venus-secondary) 50%, 
+    var(--moon-primary) 60%, 
+    var(--moon-primary) 75%, 
+    var(--moon-secondary) 85%, 
+    var(--moon-secondary) 100%);
 }
 
 /* Base styles */
@@ -77,7 +93,7 @@ body {
     text-shadow: 0 0 5px var(--venus-primary), 0 0 10px var(--venus-primary);
   }
   to {
-    text-shadow: 0 0 10px var(--moon-primary), 0 0 20px var(--moon-primary);
+    text-shadow: 0 0 8px var(--moon-primary), 0 0 15px var(--moon-primary);
   }
 }
 
@@ -190,12 +206,14 @@ body {
   right: 0;
   bottom: 0;
   border-radius: 50%;
+  /* Updated blend effect with 75% Venus and 25% Moon balance */
   background: linear-gradient(135deg,
     var(--venus-primary) 0%,
     var(--venus-secondary) 25%,
-    var(--moon-primary) 50%,
+    var(--venus-secondary) 50%,
+    var(--moon-primary) 60%,
     var(--moon-secondary) 75%,
-    var(--venus-accent) 100%);
+    var(--moon-secondary) 100%);
   opacity: 0.3;
   mix-blend-mode: overlay;
   z-index: 1;
@@ -210,10 +228,11 @@ body {
   left: -50%;
   right: -50%;
   bottom: -50%;
+  /* Subtler radial gradient for a more classy appearance */
   background: radial-gradient(circle at center,
     var(--venus-primary) 0%,
     transparent 70%);
-  opacity: 0.2;
+  opacity: 0.15;
   mix-blend-mode: soft-light;
   z-index: 2;
   pointer-events: none;
@@ -226,25 +245,28 @@ body {
     background: linear-gradient(135deg,
       var(--venus-primary) 0%,
       var(--venus-secondary) 25%,
-      var(--moon-primary) 50%,
+      var(--venus-secondary) 50%,
+      var(--moon-primary) 60%,
       var(--moon-secondary) 75%,
-      var(--venus-accent) 100%);
+      var(--moon-secondary) 100%);
   }
   50% {
     background: linear-gradient(135deg,
       var(--moon-primary) 0%,
       var(--moon-secondary) 25%,
-      var(--venus-primary) 50%,
+      var(--venus-primary) 40%,
+      var(--venus-primary) 60%,
       var(--venus-secondary) 75%,
-      var(--moon-accent) 100%);
+      var(--venus-secondary) 100%);
   }
   100% {
     background: linear-gradient(135deg,
-      var(--venus-accent) 0%,
-      var(--moon-primary) 25%,
-      var(--venus-secondary) 50%,
-      var(--moon-secondary) 75%,
-      var(--venus-primary) 100%);
+      var(--venus-secondary) 0%,
+      var(--moon-primary) 15%,
+      var(--moon-primary) 35%,
+      var(--venus-primary) 50%,
+      var(--venus-primary) 75%,
+      var(--moon-secondary) 100%);
   }
 }
 
@@ -759,8 +781,8 @@ footer {
    Logo Lightbox Image Transition
 ============================== */
 #logoLightboxImage {
-  opacity: 0;
-  transform: scale(0.95);
+  opacity: 1;
+  transform: scale(1);
   transition: opacity 0.6s ease, transform 0.6s ease;
   max-width: 90%;
   max-height: 90%;
@@ -770,6 +792,11 @@ footer {
 #logoLightboxImage.show {
   opacity: 1;
   transform: scale(1);
+}
+
+#logoLightboxImage.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
 }
 
 .kartik-highlight {
@@ -786,7 +813,6 @@ footer {
     line-height: 1.7;   /* text ko readable banane ke liye */
   }
 
-/* Preloader Container */
 /* Preloader Container */
 #preloader {
   position: fixed;
@@ -838,3 +864,27 @@ footer {
 /* ==============================
 end css styles
 ============================== */
+
+/* Accessibility enhancements for focus states */
+.btn:focus,
+button:focus {
+  outline: 2px solid var(--primary-theme);
+  outline-offset: 2px;
+}
+
+.modal-content:focus {
+  outline: none;
+}
+
+/* Ensure proper contrast for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
