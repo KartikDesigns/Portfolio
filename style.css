@@ -865,6 +865,33 @@ footer {
 end css styles
 ============================== */
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cosmic-darker);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-gradient);
+  border-radius: 10px;
+  border: 2px solid var(--cosmic-darker);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--venus-gradient);
+  box-shadow: 0 0 10px rgba(255, 202, 176, 0.5);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--venus-primary) var(--cosmic-darker);
+}
+
 /* Accessibility enhancements for focus states */
 .btn:focus,
 button:focus {
