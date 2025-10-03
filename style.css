@@ -26,22 +26,22 @@
   --venus-gradient: linear-gradient(135deg, var(--venus-primary), var(--venus-secondary));
   --moon-gradient: linear-gradient(135deg, var(--moon-primary), var(--moon-secondary));
   /* Updated cosmic gradient for a more subtle, classy appearance */
-  --cosmic-gradient: linear-gradient(135deg, 
-    var(--cosmic-darker) 0%, 
-    var(--cosmic-darker) 25%, 
-    #16162a 40%, 
-    var(--cosmic-dark) 60%, 
-    var(--cosmic-dark) 80%, 
+  --cosmic-gradient: linear-gradient(135deg,
+    var(--cosmic-darker) 0%,
+    var(--cosmic-darker) 25%,
+    #16162a 40%,
+    var(--cosmic-dark) 60%,
+    var(--cosmic-dark) 80%,
     #121225 100%);
   /* Updated theme gradient with 75% Venus and 25% Moon for a classy, balanced blend */
-  --theme-gradient: linear-gradient(135deg, 
-    var(--venus-primary) 0%, 
-    var(--venus-primary) 25%, 
-    var(--venus-secondary) 35%, 
-    var(--venus-secondary) 50%, 
-    var(--moon-primary) 60%, 
-    var(--moon-primary) 75%, 
-    var(--moon-secondary) 85%, 
+  --theme-gradient: linear-gradient(135deg,
+    var(--venus-primary) 0%,
+    var(--venus-primary) 25%,
+    var(--venus-secondary) 35%,
+    var(--venus-secondary) 50%,
+    var(--moon-primary) 60%,
+    var(--moon-primary) 75%,
+    var(--moon-secondary) 85%,
     var(--moon-secondary) 100%);
 }
 
@@ -180,6 +180,26 @@ body {
   margin: 2rem;
   box-shadow: 0 0 30px rgba(245, 243, 206, 0.2);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle animated background to hero section */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotateBg 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateBg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* Hero image */
@@ -195,6 +215,7 @@ body {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 /* Venus and Moon blend effect */
@@ -282,10 +303,14 @@ body {
 .hero-section h1 {
   color: var(--cosmic-dark);
   font-family: 'Orbitron', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-section h2 {
   color: var(--cosmic-darker);
+  position: relative;
+  z-index: 1;
 }
 
 .hero-btn {
@@ -297,11 +322,29 @@ body {
   border-radius: 30px;
   transition: all 0.3s ease;
   box-shadow: 0 0 15px rgba(255, 202, 176, 0.5);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .hero-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 20px rgba(255, 202, 176, 0.8);
+}
+
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.hero-btn:hover::before {
+  left: 100%;
 }
 
 /* Sections */
