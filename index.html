@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+
+<meta name="description" content="Explore Kartik Monga's graphic design portfolio – where creativity meets emotion and beauty. Soulful logos, captivating digital illustrations, and harmonious branding projects that inspire.">
+
+  <!-- ==============================
+       Cache Control
+  =============================== -->
+<meta http-equiv="Cache-Control" content="public, max-age=604800"> <!-- 1 week -->
+<meta http-equiv="Expires" content="Wed, 18 Sep 2025 14:00:00 GMT">
+
+  <!-- ==============================
+       Favicon
+  =============================== -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- ==============================
+       Preload Critical Assets
+  =============================== -->
+  <!-- Hero image (LCP optimization) -->
+  <link rel="preload" href="images/kartik.webp" as="image">
+
+  <!-- Custom CSS -->
+  <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+
+  <!-- Font Awesome (latest only) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+
+  <!-- ==============================
+       Fonts
+  =============================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- ==============================
+       Bootstrap (for layout)
+  =============================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ==============================
+       Google Material Symbols
+  =============================== -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward" />
+</head>
+
+<body>
+<!-- Preloader -->
+<div id="preloader">
+  <div class="cosmic-loader">
+    <div class="spinner"></div>
+  </div>
+  <p class="preloader-text">Kartik-Design</p>
+</div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid px-3 px-md-4 py-2 py-md-3">
+      <a class="navbar-brand fw-bold" href="#Portfolio">Portfolio</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav gap-2 gap-lg-3 mt-3 mt-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+<section class="hero-section d-flex flex-column align-items-center justify-content-center text-center mt-7" id="home">
+  <!-- Hero Image (Updated Logo) -->
+  <img src="images/kartik.webp"
+       alt="Kartik Profile Logo"
+       class="hero-img rounded-circle mb-4 shadow-lg img-fluid"
+       loading="lazy">
+
+  <!-- Hero Text -->
+  <h1 class="fw-bold display-4">Hi, I’m Kartik </h1>
+  <h2 class="fs-5">Graphic Designer</h2>
+
+  <!-- Hero Button -->
+  <a href="#projects" class="btn btn-lg btn-primary mt-3 hero-btn">View Projects</a>
+</section>
+
+
+  <!-- About -->
+  <section class="container py-5" id="about">
+    <h2 class="fw-bold mb-3">About Me</h2>
+    <p>
+      I’m a graphic designer with hands-on experience in Photoshop, CorelDRAW, Figma, and AI-powered design workflows. I
+      specialize in crafting visually compelling designs that balance creativity with precision—whether it’s digital
+      illustrations, UI mockups, branding assets, or conceptual layouts. My approach blends traditional design skills
+      with modern tools, allowing me to adapt across print, web, and interactive platforms. I thrive on turning ideas
+      into visuals that connect, communicate, and inspire. </p>
+  </section>
+
+  <!-- ==============================
+     Projects Gallery with Filters
+============================== -->
+  <section id="projects" class="gallery-section container-fluid container-md px-2 px-md-3">
+    <h2 class="gallery-title text-center mb-3 mb-md-4">Projects</h2>
+    
+    <!-- Filter Buttons -->
+    <div class="d-flex justify-content-center flex-wrap gap-2 mb-3 mb-md-4 px-2">
+      <button class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="illustrations">Illustrations</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="banners">Banners</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="festivals">Festivals</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="nature">Nature</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="space">Space</button>
+    </div>
+
+    <div class="gallery-grid">
+
+      <!-- Project 1 - Festivals -->
+      <div class="gallery-card" data-category="festivals illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/ganesh.webp" alt="Ganesh Project" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Ganesh</div>
+      </div>
+
+      <!-- Project 2 - Nature -->
+      <div class="gallery-card" data-category="nature illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/dolphin.webp" alt="Dolphin Project" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Dolphin</div>
+      </div>
+
+      <!-- Project 3 - Nature -->
+      <div class="gallery-card" data-category="nature illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/ice or frozen unique v2.webp" alt="Frozen World" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Frozen World</div>
+      </div>
+
+      <!-- Project 4 - Festivals -->
+      <div class="gallery-card" data-category="festivals illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/CHRISTMAX.webp" alt="Christmas" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Christmas</div>
+      </div>
+
+      <!-- Project 5 - Nature -->
+      <div class="gallery-card" data-category="nature illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/ship dv5.webp" alt="Ship Design" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Ship Design</div>
+      </div>
+
+      <!-- Project 6 - Space -->
+      <div class="gallery-card" data-category="space illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/space v2.webp" alt="Space Scene" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Space Scene</div>
+      </div>
+
+      <!-- Project 7 - Festivals -->
+      <div class="gallery-card" data-category="festivals illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/HUNUMAN.webp" alt="Hanuman Design" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Hanuman Design</div>
+      </div>
+
+      <!-- Project 8 - Nature -->
+      <div class="gallery-card" data-category="nature illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/valcano design-v5.webp" alt="Volcano Design" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Volcano Design</div>
+      </div>
+
+      <!-- Project 9 - Space -->
+      <div class="gallery-card" data-category="space illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/SPACE DESIGNV99.webp" alt="Cosmic Design" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Cosmic Design</div>
+      </div>
+
+      <!-- Project 10 - Banners -->
+      <div class="gallery-card" data-category="banners">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/BAANER 1.webp" alt="Kotlin Banner" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Kotlin Banner</div>
+      </div>
+
+      <!-- Project 11 - Banners -->
+      <div class="gallery-card" data-category="banners">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/banner 2.webp" alt="Java Banner" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Java Banner</div>
+      </div>
+
+      <!-- Project 12 - Banners -->
+      <div class="gallery-card" data-category="banners">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/calender.webp" alt="Kotlin Banner Updated" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Calendar 2025 </div>
+      </div>
+
+      <!-- Project 13 - Nature -->
+      <div class="gallery-card" data-category="nature illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/glodal warning.webp" alt="Global Warming" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Global Warming</div>
+      </div>
+
+      <!-- Project 14 - Festivals -->
+      <div class="gallery-card" data-category="festivals banners">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/humumnan.webp" alt="Hanuman Banner" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Hanuman Banner</div>
+      </div>
+
+      <!-- Project 15 - Festivals -->
+      <div class="gallery-card" data-category="festivals illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/temple scene v2.webp" alt="Temple Scene" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Temple Scene</div>
+      </div>
+
+      <!-- Project 16 - Festivals -->
+      <div class="gallery-card" data-category="festivals illustrations">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+          <img src="images/diwali.webp" alt="Diwali Celebration" loading="lazy" class="img-fluid">
+        </a>
+        <div class="gallery-overlay">Diwali Celebration</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================
+     Lightbox Modal with Arrows
+============================== -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-body p-0 position-relative text-center">
+
+          <!-- Image with transition -->
+          <img id="lightboxImage" src="" class="img-fluid lightbox-img" alt="" style="max-height:80vh;">
+
+          <!-- Prev Button -->
+          <button id="prevBtn" class="btn btn-primary position-absolute top-50 start-0 translate-middle-y ms-2">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <!-- Next Button -->
+          <button id="nextBtn" class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-2">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================
+     Simple Lightbox Modal (No Sequence)
+============================== -->
+  <div class="modal fade" id="logoLightboxModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark border-0 position-relative">
+        <div class="modal-body p-0 text-center">
+          <img id="logoLightboxImage" src="" class="img-fluid" alt="" style="max-height:80vh;">
+          <!-- Controls -->
+          <!-- Prev Button -->
+          <button class="lightbox-prev btn btn-dark position-absolute top-50 start-0 translate-middle-y">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <!-- Next Button -->
+          <button class="lightbox-next btn btn-dark position-absolute top-50 end-0 translate-middle-y">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================
+     Logo Gallery
+============================== -->
+  <section id="logos" class="gallery-section container-fluid container-md mt-4 mt-md-5 px-2 px-md-3">
+    <h2 class="gallery-title text-center mb-3 mb-md-4">Logo Gallery</h2>
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 g-2 g-md-3 g-lg-4">
+
+      <!-- Logo 1 -->
+      <div class="col">
+        <div class="logo-gallery-item">
+          <a href="#" class="logo-link" data-index="0" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+            <img src="images/logos/black logo   v2.webp" alt="Black Logo" class="img-fluid rounded" loading="lazy">
+
+          </a>
+          <div class="logo-name-overlay">Black Logo</div>
+        </div>
+      </div>
+
+      <!-- Logo 2 -->
+      <div class="col">
+        <div class="logo-gallery-item">
+          <a href="#" class="logo-link" data-index="1" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+            <img src="images/logos/circle logo  v888.webp" alt="Circle Logo" class="img-fluid rounded" loading="lazy">
+
+          </a>
+          <div class="logo-name-overlay">Circle Logo</div>
+        </div>
+      </div>
+
+      <!-- Logo 3 -->
+      <div class="col">
+        <div class="logo-gallery-item">
+          <a href="#" class="logo-link" data-index="2" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+            <img src="images/logos/humuman logo update-4.webp" alt="Humuman Logo" class="img-fluid rounded" loading="lazy">
+
+          </a>
+          <div class="logo-name-overlay">Humuman Logo</div>
+        </div>
+      </div>
+
+      <!-- Logo 4 -->
+      <div class="col">
+        <div class="logo-gallery-item">
+          <a href="#" class="logo-link" data-index="3" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+            <img src="images/logos/CYHO.webp" alt="CYHO" class="img-fluid rounded" loading="lazy">
+
+          </a>
+          <div class="logo-name-overlay">CYHO</div>
+        </div>
+      </div>
+
+      <!-- Logo 5 -->
+      <div class="col">
+        <div class="logo-gallery-item">
+          <a href="#" class="logo-link" data-index="4" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+            <img src="images/logos/solar system v3.webp" alt="Solar System" loading="lazy" class="img-fluid rounded">
+
+          </a>
+          <div class="logo-name-overlay">Solar System</div>
+        </div>
+      </div>
+
+      <!-- Logo 6 -->
+      <div class="col">
+        <div class="logo-gallery-item">
+          <a href="#" class="logo-link" data-index="5" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+            <img src="images/logos/hunuman design.webp" alt="Hunuman Design" loading="lazy" class="img-fluid rounded">
+
+          </a>
+          <div class="logo-name-overlay">Hunuman Design</div>
+        </div>
+      </div>
+
+      <!-- Logo 7 -->
+      <div class="col">
+        <div class="logo-gallery-item">
+          <a href="#" class="logo-link" data-index="6" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+            <img src="images/logos/design logo  brown v4_.webp" alt="Logo 7" loading="lazy" class="img-fluid rounded">
+
+          </a>
+          <div class="logo-name-overlay"> Brown logo </div>
+        </div>
+      </div>
+
+      <!-- Logo 8 -->
+      <div class="col">
+        <div class="logo-gallery-item">
+          <a href="#" class="logo-link" data-index="7" data-bs-toggle="modal" data-bs-target="#logoLightboxModal">
+            <img src="images/logos/logo455.webp" alt="Logo 8" loading="lazy" class="img-fluid rounded">
+
+          </a>
+          <div class="logo-name-overlay"> CHYQ</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="container py-4 py-md-5 px-3 px-md-4" id="skills">
+    <h2 class="fw-bold mb-3 mb-md-4 text-center text-md-start">Skills</h2>
+
+    <div class="skill-item">
+      <div class="d-flex justify-content-between">
+        <span><i class="fa-solid fa-paint-brush me-2 text-danger"></i> Photoshop</span>
+        <span>90%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 90%"></div>
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <div class="d-flex justify-content-between">
+        <span><i class="fa-solid fa-pen-ruler me-2 text-primary"></i> CorelDraw</span>
+        <span>85%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 85%"></div>
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <div class="d-flex justify-content-between">
+        <span><i class="fa-solid fa-palette me-2 text-warning"></i> Graphic Design</span>
+        <span>80%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 80%"></div>
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <div class="d-flex justify-content-between">
+        <span><i class="fa-brands fa-figma me-2 text-success"></i> Figma</span>
+        <span>75%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 75%"></div>
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <div class="d-flex justify-content-between">
+        <span><i class="fa-solid fa-robot me-2 text-info"></i> AI Design</span>
+        <span>88%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-progress" style="width: 88%"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-section py-4 py-md-5 text-center" id="contact">
+    <div class="container px-3 px-md-4">
+      <h2 class="fw-bold mb-3 mb-md-4">Get in Touch</h2>
+      <p class="lead mb-3 mb-md-4 px-2" style="color: white;">connect and collaborate. Drop me a message anytime</p>
+
+      <!-- Email Only -->
+      <a href="mailto:kartikmongaworkonly@gmail.com"
+        class="email-highlight d-inline-flex align-items-center px-3 px-md-4 py-2 py-md-3 rounded-3 shadow-sm border">
+        <i class="fas fa-envelope me-2 text-danger"></i>
+        <span class="fw-semibold d-block text-break">kartikmongaworkonly@gmail.com</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Go to Top Button -->
+  <button id="goTopBtn" class="btn btn-primary">
+    <span class="material-symbols-outlined">
+      arrow_upward
+    </span>
+  </button>
+
+  <!-- Footer -->
+<!-- 🌟 Footer Section: Centralized social links and creator credit -->
+<footer class="py-3 py-md-4 text-center">
+  <div class="container px-3">
+
+    <!-- 🔗 Social Media Icons Row -->
+    <div class="d-flex justify-content-center gap-3 gap-md-4 mb-2 mb-md-3 fs-5 fs-md-4">
+
+      <!-- 📸 Instagram Profile -->
+      <a href="https://www.instagram.com/knowledge12465?igsh=dWcyaXhrM3FkaGsw" class="text-danger" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <!-- 💼 LinkedIn Feed (can be updated to profile URL) -->
+      <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" class="text-primary"
+        target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <!-- 🧠 GitHub Repository Hub -->
+      <a href="https://github.com/KartikDesigns" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-dark">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <!-- 📌 Pinterest Board -->
+      <a href="https://in.pinterest.com/KartikDesign12/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="text-danger">
+        <i class="fab fa-pinterest"></i>
+      </a>
+    </div>
+
+    <!-- 🖋️ Creator Credit Line -->
+    <p class="text-secondary mb-0 small">
+      Made by <span class="kartik-highlight">Kartik</span>
+    </p>
+
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="script.js"  defer></script>
+</body>
+
+</html>
